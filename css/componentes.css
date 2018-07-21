@@ -1,0 +1,16 @@
+#banner, #banner ul{
+	padding: 0;
+	margin: 0;
+	height: 550px;
+}
+#banner li{
+	list-style: none;
+}
+.bx-wrapper ul li { 
+	height: 550px; 
+	position: relative
+}
+.bx-wrapper img{
+	position: absolute;
+	top: -30%;
+}

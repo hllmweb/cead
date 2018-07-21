@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+*,*::before,*::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html,body{
+	font-family: 'Lato', sans-serif;
+	font-size: 0;
+}
+header#inicio{
+	border-top: 5px solid #0B1672;
+	border-bottom: 5px solid #8EBB82;
+}
+.limite{
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+}
+.topo{
+	display: block;
+	padding: 20px 0;
+}
+.logo, .navegacao{
+	display: inline-block;
+	vertical-align: middle;
+}
+.logo{
+	width: 20%;
+}
+.navegacao{
+	width: 80%;
+	font-size: 18px;
+	text-align: right;
+}
+.navegacao ul{
+	list-style: none;
+}
+.navegacao li{
+	display: inline-block;
+	margin-right: 45px;
+}
+.navegacao li:last-child{
+	margin-right: 0px;
+}
+.navegacao a{
+	text-align: center;
+	color: #00113a;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-weight: 400;
+	/*font-weight: 700;*/
+}
+a.btn-solicitar-topo{
+	/*background: linear-gradient(to bottom right, #a12529, #ec3237);
+	background-color: #ec3237;*/
+	color: #FFF;
+	padding: 15px 20px;
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: 18px;
+	background-color: #0B1672;
+	text-decoration: none;
+}
+.piscar {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+#servicos{
+	margin-top: -60px;
+	position: relative;
+	z-index: 9999;
+
+	width: 100%;
+
+}
+#servicos ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#servicos li{
+	display: inline-block;
+	height: 315px;
+	width: calc(100% - 800px);
+	box-sizing: border-box;
+	color: #FFF;
+	vertical-align: top;
+	padding: 40px;
+}
+#servicos li:first-child{
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+#servicos li:last-child{
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+#servicos li i{
+	font-size: 82px;
+}
+#servicos h2{
+	display: block;
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#servicos p{
+	text-align: justify;
+	font-size: 16px;
+	line-height: 28px;
+}
+.azul{
+	background-color: #0B1672;
+}
+.verde-1{
+	background-color: #5BAD49;
+}
+.verde-2{
+	background-color: #9DCD52;
+}
+#estrutura{
+	padding: 25px 0;
+}
+#estrutura h2{
+    font-family: "Grand Hotel",cursive;
+    font-weight: 400;
+    color: #0B1672;
+    font-size:46px;
+    text-align: center;
+}
+#matricula{
+	display: block;
+	position: relative;
+    min-height: 500px;
+    height: 100%;
+    overflow: hidden;
+}
+.foto-matricula, .info-matricula{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	vertical-align: top;
+}
+.foto-matricula{
+	position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.foto-matricula img{
+	width: 100%;
+	height: 100%;
+}
+.info-matricula{
+	background: #5fcde3;
+	font-size: 12px;
+	padding-top: 2%;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.info-matricula h2, .info-matricula h3, .info-matricula p, .info-matricula ul{
+	margin-left: 8%;
+	color: #FFF;
+}
+.info-matricula h2{
+	font-size: 48px;
+    font-family: Arial,sans-serif;
+    font-weight: 300;
+}
+.info-matricula h3{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.info-matricula p{
+	font-size: 22px;
+}
+.info-matricula ul{
+	margin-top:5px;
+	font-size: 16px;
+}
+.info-matricula li{
+	padding: 5px 0;
+	list-style-type: none;
+}
+.info-matricula li::before{
+ 	font-family: 'Font Awesome\ 5 Free';
+   	content: "\f14a";
+   	margin-right: 10px;
+}
+.btn-bloco{
+	display: block;
+	height: 100%;
+	align-items: center;
+	justify-items: center;
+	padding-left: 8%;
+	padding-top: 20px;
+}
+.btn-solicitar{
+	background: transparent;
+	border: 1px solid #338393;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-size: 24px;
+	border-radius: 12px;
+	text-align: center;
+	color: #338393;
+}
+/*
+Fazer listar desordenada com before e after personalizado
+*/
