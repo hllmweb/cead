@@ -11,7 +11,7 @@ html,body{
 }
 header#inicio{
 	border-top: 5px solid #0B1672;
-	border-bottom: 5px solid #8EBB82;
+	border-bottom: 5px solid #9CCF51;
 }
 .limite{
 	max-width: 1200px;
@@ -52,6 +52,64 @@ header#inicio{
 	font-weight: 400;
 	/*font-weight: 700;*/
 }
+.navegacao ul li ul{
+	display: none;
+	margin:0;
+	padding:4% 0 0 0;
+	position:absolute;
+	z-index:7777;
+	width:240px;
+	text-align:left;
+	/*-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.3);*/
+}
+.navegacao ul li ul li{
+	display:block;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	/*background:rgba(255,255,255,0.8);*/
+	background-color: #9CCF51;
+	margin-right:0px;
+}
+.navegacao ul li ul li a{
+	display: block;
+	color: #FFF;
+}
+/* .navegacao ul li.com-submenu ul{} */
+.navegacao ul li.com-submenu a{
+	padding: 10px;
+	display: block;
+
+
+}
+.navegacao ul li ul li a:hover{
+	/* background:rgba(0,0,0,0.1); */
+
+}
+.navegacao ul li.com-submenu:hover{
+	background-color: #9CCF51;
+	/*-webkit-box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.3);*/
+	border-radius: 6px;
+}
+.navegacao ul li.com-submenu:hover a, .navegacao ul li.com-submenu:hover i {
+	color: #FFF;
+}
+.navegacao ul li:hover ul{
+	display:block;
+	margin-top: -2px;
+}
+.navegacao ul li:last-child:hover ul{
+	right:0;
+}
+.menu-seta{
+	display: inline-block;
+	margin-right: 5px;
+}
+.menu-seta i{
+	color: #00113a;
+}
 a.btn-solicitar-topo{
 	/*background: linear-gradient(to bottom right, #a12529, #ec3237);
 	background-color: #ec3237;*/
@@ -77,6 +135,11 @@ a.btn-solicitar-topo{
     visibility: hidden;
   }
 }
+.fade{
+	-webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
 #servicos{
 	margin-top: -60px;
 	position: relative;
@@ -95,9 +158,12 @@ a.btn-solicitar-topo{
 	height: 315px;
 	width: calc(100% - 800px);
 	box-sizing: border-box;
-	color: #FFF;
 	vertical-align: top;
 	padding: 40px;
+}
+#servicos a{
+	text-decoration: none;
+	color: #FFF;
 }
 #servicos li:first-child{
 	border-top-left-radius: 12px;
@@ -224,3 +290,179 @@ a.btn-solicitar-topo{
 /*
 Fazer listar desordenada com before e after personalizado
 */
+#contato{
+	background:#4989E1;
+	padding: 25px 0;
+}
+#contato h2{
+	font-family: "Grand Hotel",cursive;
+    font-weight: 400;
+    color: #FFF;
+    font-size:46px;
+    text-align: center;
+}
+#contato .formulario-contato{
+	width: 80%;
+	margin:20px auto;
+	height: 280px;
+	display: block;
+	position: relative;
+	font-family: 'Lato', sans-serif;
+}
+#contato .formulario-contato p{
+	color:#000;
+	text-align: center;
+	font-size:22px;
+	padding:20px;
+}
+#contato .formulario-contato label{
+	width: 430px;
+	display: block;
+	margin-bottom: 18px;
+}
+#contato .formulario-contato label input{
+	width: 100%;
+	padding:20px 0px 20px 20px;
+	background: #3d73ba;
+	border:0;
+	border-radius: 18px;
+	-webkit-border-radius:18px;
+	outline: none;
+	color:#FFF;
+	font-weight: 600;
+	vertical-align: top;
+	font-size:12px;
+}
+#contato .formulario-contato label textarea{
+	width: 100%;
+	height: 200px;
+	background: #3d73ba;
+	border:0;
+	border-radius: 18px;
+	-webkit-border-radius:18px;
+	padding:20px 0 20px 20px;
+	outline: none;
+	color:#FFF;
+	font-weight: 600;
+	overflow: auto;
+	vertical-align: top;
+	font-size:12px;
+}
+#contato .formulario-contato label textarea::-webkit-scrollbar-track {
+    background: #c64949;
+}
+#contato .formulario-contato label textarea::-webkit-scrollbar {
+	width: 20px;	
+ 	background: #c64949;
+}
+#contato .formulario-contato label textarea::-webkit-scrollbar-thumb {
+     background:  rgba(186, 0, 0, 0.5);
+}
+#contato .formulario-contato label input::placeholder {
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+#contato .formulario-contato label input:-ms-input-placeholder{
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+#contato .formulario-contato label input::-ms-input-placeholder{
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;	
+	padding-left: 0px;
+}
+#contato .formulario-contato label textarea::placeholder{
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+#contato .formulario-contato label textarea:-ms-input-placeholder{
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+#contato .formulario-contato label textarea::-ms-input-placeholder{
+	color:#FFF;
+	font-size:12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 0px;
+}
+#contato .formulario-contato .form-esquerda{
+	float:left;
+}
+#contato .formulario-contato .form-direita{
+	float:right;
+}
+#contato .formulario-contato button{
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	border:0;
+	border-bottom: 3px solid #081156;
+	background: #0B1672;
+	color:#FFF;
+	font-size:18px;
+	font-weight: 600;
+	padding:15px 20px;
+	border-radius:12px;
+	-webkit-border-radius:12px;
+	cursor:pointer;	
+}
+#contato .formulario-contato button:hover{
+	background: linear-gradient(#081156,#081156);
+	background: -webkit-linear-gradient(#081156,#081156);
+	background: -o-linear-gradient(#081156,#081156);
+	background: -moz-linear-gradient(#081156,#081156);
+}
+#informacoes{
+	height: 64px;
+	background:#0B1672;
+}
+#informacoes ul{
+	list-style: none;
+	padding: 14px 0;
+	margin:0 auto;
+	width: 80%;
+	text-align: center;
+}
+#informacoes ul li{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5%;
+}
+#informacoes ul li:last-child{
+	margin-right: 0%;
+}
+#informacoes ul li i{
+	display: inline-block;
+	font-size:32px;
+	color: #FFF;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+#informacoes ul li span{
+	display: inline-block;
+	font-size:14px;
+	color:#FFF;
+	font-family: 'Lato', sans-serif;
+	vertical-align: middle;
+	text-align: left;
+}
+#mapa{
+	width: 100%;
+	height: 450px;
+	/* background-color: rgba(11,22,114,0.8); */
+}
