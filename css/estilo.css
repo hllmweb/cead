@@ -55,7 +55,7 @@ header#inicio{
 .navegacao ul li ul{
 	display: none;
 	margin:0;
-	padding:4% 0 0 0;
+	padding: 10px 0 0 0;
 	position:absolute;
 	z-index:7777;
 	width:240px;
