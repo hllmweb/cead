@@ -1,4 +1,8 @@
-$('#banner ul').bxSlider({
+$('a[href="#"]').click(function(e) {
+	e.preventDefault();
+});
+
+$("#banner ul").bxSlider({
 	auto: false,
 	pager: false,
 	nextText: '<i class="fa fa-chevron-right"></i>',
@@ -6,6 +10,16 @@ $('#banner ul').bxSlider({
 
 });
 
+
+//menu click
+$('.navegacao a').on('click', function(e){
+	e.preventDefault()
+	$('html, body').animate({
+		scrollTop: $( $.attr(this, 'href') ).offset().top-100
+		}, 500);
+});
+
+//menu drop
 $(".navegacao li").mouseover(function(){
     $(this).find(".menu-seta i").addClass("fa-flip-vertical");
 }).mouseout(function() {
@@ -13,10 +27,9 @@ $(".navegacao li").mouseover(function(){
 });
 
 
-//inicilização do mapa
+
+//inicilizacao do mapa
 function initMap(){
-
-
 	var myLatlng = new google.maps.LatLng(-3.1032544, -60.0583652);
 		var mapOptions = {
     	zoom: 20,

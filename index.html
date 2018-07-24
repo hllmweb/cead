@@ -6,8 +6,8 @@
 
 	
 	<!--css-->
-	<link rel="stylesheet" href="css/estilo.css?v=<?= time(); ?>">
-	<link rel="stylesheet" href="css/componentes.css?v=<?= time(); ?>">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/componentes.css">
 	<!--plugins-->
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/all.css">
@@ -20,10 +20,10 @@
 					<div class="logo"><a href=""><img src="img/logo-cead.png"></a></div>
 					<nav class="navegacao fade">
 						<ul>
-							<li><a href="">Início</a></li>
+							<li><a href="#inicio">Início</a></li>
 							<li><a href="">A Escola</a></li>
 							<li class="com-submenu">
-								<a href=""><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Serviços</a>
+								<a href="#servicos"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Serviços</a>
 								<ul>
 									<li><a href="">Educação Infantil</a></li>
 									<li><a href="">Ensino Fundamental</a></li>
@@ -31,7 +31,7 @@
 								</ul>
 							</li>
 							<li class="com-submenu">
-								<a href=""><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Proposta</a>
+								<a href="#"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Proposta</a>
 								<ul>
 									<li><a href="">Projetos Pedagógico</a></li>
 									<li><a href="">Item #01</a></li>
@@ -39,8 +39,8 @@
 								</ul>
 							</li>
 							<li><a href="">Eventos</a></li>
-							<li><a href="">Contato</a></li>
-							<li><a href="" class="btn-solicitar-topo piscar">Pré-Matricula</a></li>
+							<li><a href="#contato">Contato</a></li>
+							<li><a href="#matricula" class="btn-solicitar-topo piscar">Pré-Matricula</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -159,6 +159,6 @@
 	
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
-	<script src="js/site.js?v=<? time(); ?>"></script>
+	<script src="js/site.js"></script>
 </body>
 </html>
