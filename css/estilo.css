@@ -279,19 +279,19 @@ a.btn-solicitar-topo{
 }
 .btn-solicitar{
 	background: transparent;
-	border: 1px solid #338393;
+	border: 1px solid #0b1672;
 	padding: 5px 10px;
 	text-decoration: none;
 	font-size: 24px;
 	border-radius: 12px;
 	text-align: center;
-	color: #338393;
+	color: #0b1672;
 }
 /*
 Fazer listar desordenada com before e after personalizado
 */
 #contato{
-	background:#4989E1;
+	background:#4989E1 url("../img/bg-home-links.png");
 	padding: 25px 0;
 }
 #contato h2{
