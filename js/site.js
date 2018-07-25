@@ -12,11 +12,11 @@ $("#banner ul").bxSlider({
 
 
 //menu click
-$('.navegacao a').on('click', function(e){
-	e.preventDefault()
-	$('html, body').animate({
-		scrollTop: $( $.attr(this, 'href') ).offset().top-100
-		}, 500);
+$("a.para-id").on('click', function(e){
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top-150
+    }, 500);
 });
 
 //menu drop

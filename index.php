@@ -39,8 +39,8 @@
 								</ul>
 							</li>
 							<li><a href="">Eventos</a></li>
-							<li><a href="#contato">Contato</a></li>
-							<li><a href="#matricula" class="btn-solicitar-topo piscar">Pré-Matricula</a></li>
+							<li><a href="#contato" class="para-id">Contato</a></li>
+							<li><a href="#matricula" class="btn-solicitar-topo piscar para-id">Pré-Matricula</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -66,7 +66,7 @@
 					<li class="verde-1">
 						<a href="">
 							<i class="fas fa-graduation-cap"></i>
-							<h2>Ensino Fundamental 1</h2>
+							<h2>Ensino Fundamental I</h2>
 							<p>Na Educação Infantil, nosso trabalho tem por objetivo propiciar a ampliação dos interesses e conhecimentos das crianças.</p>
 						</a>	
 					</li>
@@ -157,7 +157,7 @@
 
 	<div id="mapa"></div>
 	
-	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/site.js?v=<? time(); ?>"></script>
 </body>
