@@ -5,11 +5,24 @@ $('a[href="#"]').click(function(e) {
 $("#banner ul").bxSlider({
 	auto: false,
 	pager: false,
+    slideMargin: 0,
 	nextText: '<i class="fa fa-chevron-right"></i>',
 	prevText: '<i class="fa fa-chevron-left"></i>'
 
 });
 
+
+//barra de menu fixa
+$(window).scroll(function() {
+    if($(this).scrollTop() > 300){
+        $("#inicio").addClass("fixo");
+        $(".logo img").addClass("logo-menor");
+    }else{
+        $("#inicio").removeClass("fixo");
+        $(".logo img").removeClass("logo-menor");
+    }
+
+});
 
 //menu click
 $("a.para-id").on('click', function(e){

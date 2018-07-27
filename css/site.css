@@ -1,0 +1,56 @@
+*, *::before, *::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body,html{
+	font-size: 0;
+}
+#inicio{
+	background-color: #0f166f;
+	border-bottom: 10px solid #5CAE4A;
+}
+.limite{
+	max-width: 1000px;
+	width: 100%;
+	margin: auto; 
+}
+.menu-esquerda,
+.menu-direita{
+	width: 37.5%;
+	font-size: 16px;
+	position: relative;
+}
+.menu-esquerda ul,
+.menu-direita ul{
+	list-style: none;
+}
+.menu-esquerda li,
+.menu-direita li{
+	display: inline-block;
+	padding: 0;
+	margin: 0 20px;
+}
+.menu-esquerda a,
+.menu-direita a{
+	text-decoration: none;
+	color: #FFF;
+	text-align: center;
+}
+.logo{
+	width: 25%;
+	text-align: center;
+	background-color: #7a80ba;
+}
+.menu-esquerda,
+.menu-direita,
+.logo{
+	vertical-align: middle;
+	display: inline-block;
+}
+.menu-esquerda{
+	text-align: left;
+}
+.menu-direita{
+	text-align: right;
+}

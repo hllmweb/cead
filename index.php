@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Escola CEAD</title>
 
 	
 	<!--css-->
@@ -14,43 +14,37 @@
 </head>
 <body>
 	<div id="geral">
-		<header id="inicio">
+		<div id="inicio">
 			<div class="topo">
 				<div class="limite">
 					<div class="logo"><a href="index"><img src="img/logo-cead.png"></a></div>
 					<nav class="navegacao fade">
 						<ul>
 							<li><a href="index">Início</a></li>
-							<li><a href="">A Escola</a></li>
-							<li class="com-submenu">
-								<a href="#servicos"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Serviços</a>
-								<ul>
-									<li><a href="">Educação Infantil</a></li>
-									<li><a href="">Ensino Fundamental</a></li>
-									<li><a href="">Item #02</a></li>
-								</ul>
-							</li>
+							<li><a href="escola">A Escola</a></li>
+							<li><a href="">Educação Infantil</a></li>
+							<li><a href="">Ensino Fundamental</a></li>
 							<li class="com-submenu">
 								<a href="#"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Proposta</a>
 								<ul>
 									<li><a href="">Projetos Pedagógico</a></li>
-									<li><a href="">Item #01</a></li>
-									<li><a href="">Item #02</a></li>
+									<li><a href="">Proposta Currículares</a></li>
 								</ul>
 							</li>
 							<li><a href="">Eventos</a></li>
 							<li><a href="#contato" class="para-id">Contato</a></li>
-							<li><a href="#matricula" class="btn-solicitar-topo piscar para-id">Pré-Matricula</a></li>
 						</ul>
 					</nav>
+					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id">Pré-Matricula</a></div>
 				</div>
 			</div>
-		</header>
+		</div>
 		
 		<div id="banner">
 			<ul>
-				<li><a href=""><img src="img/banner-1.png"></a></li>
+				<li><a href=""><img src="img/bg2.jpg" width="100%"></a></li>
 			</ul>
+			<!-- <div class="mascara"></div> -->
 		</div>
 		
 		<div id="servicos">

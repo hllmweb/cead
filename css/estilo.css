@@ -9,18 +9,33 @@ html,body{
 	font-family: 'Lato', sans-serif;
 	font-size: 0;
 }
-header#inicio{
-	border-top: 5px solid #0B1672;
-	border-bottom: 5px solid #9CCF51;
+#inicio{
+	/* border-top: 5px solid #0B1672; */
+	border-top: 4px solid #5BAD49;
+	/* background-color: #fafff2; */
 }
 .limite{
 	max-width: 1200px;
 	width: 100%;
+	padding: 0;
 	margin: auto;
+	position: relative;
+}
+.fixo{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999999;
+	/*background-color: rgba(0,0,0,1) !important;*/
+	background: rgba(255,255,255,0.6);
+}
+.logo-menor{
+	max-height: 80px;
+	height: 100%;
 }
 .topo{
 	display: block;
-	padding: 20px 0;
+	padding: 10px 0;
 }
 .logo, .navegacao{
 	display: inline-block;
@@ -29,17 +44,20 @@ header#inicio{
 .logo{
 	width: 20%;
 }
+.logo img{
+	height: 100px;
+}
 .navegacao{
 	width: 80%;
-	font-size: 18px;
 	text-align: right;
+	margin-top: 15px;
 }
 .navegacao ul{
 	list-style: none;
 }
 .navegacao li{
 	display: inline-block;
-	margin-right: 45px;
+	margin-right: 20px;
 }
 .navegacao li:last-child{
 	margin-right: 0px;
@@ -49,8 +67,9 @@ header#inicio{
 	color: #00113a;
 	font-family: 'Lato', sans-serif;
 	text-decoration: none;
-	font-weight: 400;
-	/*font-weight: 700;*/
+	/* font-weight: 400; */
+	font-size: 16px;
+	font-weight: 700;
 }
 .navegacao ul li ul{
 	display: none;
@@ -79,12 +98,9 @@ header#inicio{
 .navegacao ul li.com-submenu a{
 	padding: 10px;
 	display: block;
-
-
 }
 .navegacao ul li ul li a:hover{
 	/* background:rgba(0,0,0,0.1); */
-
 }
 .navegacao ul li.com-submenu:hover{
 	background-color: #9CCF51;
@@ -103,6 +119,11 @@ header#inicio{
 .navegacao ul li:last-child:hover ul{
 	right:0;
 }
+.menu-topo{
+	position: absolute;
+	top: -10px;
+	right: 0;
+}
 .menu-seta{
 	display: inline-block;
 	margin-right: 5px;
@@ -113,12 +134,12 @@ header#inicio{
 a.btn-solicitar-topo{
 	/*background: linear-gradient(to bottom right, #a12529, #ec3237);
 	background-color: #ec3237;*/
+	/* border-radius: 12px; */
 	color: #FFF;
-	padding: 15px 20px;
-	border-radius: 12px;
+	padding: 10px 15px;
 	font-weight: 700;
-	font-size: 18px;
-	background-color: #0B1672;
+	font-size: 16px;
+	background-color: #5BAD49;
 	text-decoration: none;
 }
 .piscar {
@@ -465,4 +486,42 @@ Fazer listar desordenada com before e after personalizado
 	width: 100%;
 	height: 450px;
 	/* background-color: rgba(11,22,114,0.8); */
+}
+#pagina-titulo{
+	padding: 40px 0;
+	background: #10409D;
+	border-top: 4px solid #0B1672;
+}
+#pagina-titulo h2 > a{
+	font-family: 'Lato',sans-serif;
+	font-size: 48px;
+	font-weight: 300;
+	text-decoration: none;
+	color: #FFF;
+}
+#pagina-titulo span{
+	position: relative;
+}
+#pagina-titulo span:before{
+	content: "";
+    position: absolute;
+    top: -8px;
+    right: -61px;
+    width: 49px;
+    height: 2px;
+    background: #fff;
+}
+#pagina-titulo span:after{
+	width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -12px;
+    right: -71px;
+    content: "";
+}
+#pagina-detalhe{
+	min-height: 400px;
+	background-color: #FFF;
 }
