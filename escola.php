@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div id="geral">
-		<header id="inicio">
+		<div id="inicio">
 			<div class="topo">
 				<div class="limite">
 					<div class="logo"><a href="index"><img src="img/logo-cead.png"></a></div>
@@ -33,12 +33,12 @@
 							</li>
 							<li><a href="">Eventos</a></li>
 							<li><a href="#contato" class="para-id">Contato</a></li>
-							<li><a href="#matricula" class="btn-solicitar-topo piscar para-id">Pré-Matricula</a></li>
 						</ul>
 					</nav>
+					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id"><i class="fas fa-graduation-cap"></i> Pré-Matricula</a></div>
 				</div>
 			</div>
-		</header>
+		</div>
 		
 		<div id="pagina-titulo">
 			<div class="limite">
