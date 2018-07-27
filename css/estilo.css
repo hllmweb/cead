@@ -50,7 +50,7 @@ html,body{
 .navegacao{
 	width: 80%;
 	text-align: right;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 }
 .navegacao ul{
 	list-style: none;
@@ -68,8 +68,9 @@ html,body{
 	font-family: 'Lato', sans-serif;
 	text-decoration: none;
 	/* font-weight: 400; */
+	text-transform: uppercase;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 400;
 }
 .navegacao ul li ul{
 	display: none;
@@ -524,4 +525,22 @@ Fazer listar desordenada com before e after personalizado
 #pagina-detalhe{
 	min-height: 400px;
 	background-color: #FFF;
+}
+.menu-item{
+	list-style: none;
+	text-align: center;
+	margin-top: 20px;
+}
+.menu-item li{
+	width: 30%;
+	height: 202.5px;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;	
+	padding: 0;
+}
+.menu-item img{
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
 }

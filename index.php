@@ -35,7 +35,7 @@
 							<li><a href="#contato" class="para-id">Contato</a></li>
 						</ul>
 					</nav>
-					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id">Pré-Matricula</a></div>
+					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id"><i class="fas fa-graduation-cap"></i> Pré-Matricula</a></div>
 				</div>
 			</div>
 		</div>
@@ -79,6 +79,14 @@
 		<div id="estrutura">
 			<div class="limite">
 				<h2>Nossa Estrutura</h2>
+				<ul class="menu-item">
+					<li><a href=""><img src="img/estrutura-9.png" alt=""></a></li>
+					<li><a href=""><img src="img/estrutura-1.jpg" alt=""></a></li>
+					<li><a href=""><img src="img/estrutura-3.jpg" alt=""></a></li>
+					<li><a href=""><img src="img/estrutura-8.jpg" alt=""></a></li>
+					<li><a href=""><img src="img/estrutura-5.jpg" alt=""></a></li>
+					<li><a href=""><img src="img/estrutura-6.jpg" alt=""></a></li>
+				</ul>
 			</div>
 		</div>
 
