@@ -56,7 +56,7 @@
 
 
 		<div id="matricula">
-			<div class="foto-matricula"><img src="img/matricula.png"></div>
+			<div class="foto-matricula"><img src="img/matricula-1.png"></div>
 			<div class="info-matricula">
 				<h2>Matrícula</h2>
 				<p>Documentos necessários:</p>

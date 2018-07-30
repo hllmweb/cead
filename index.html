@@ -42,7 +42,18 @@
 		
 		<div id="banner">
 			<ul>
-				<li><a href=""><img src="img/bg2.jpg" width="100%"></a></li>
+				<li>
+					<a href=""><img src="img/bg2.jpg" width="100%"></a>
+					<h2 class="titulo-topo fadeInRightSm animated">
+						<div class="bg"><span>Faça a Pré-Matricula de Seu Filho</span></div> 
+						<div class="texto-info-topo">
+							<div class="right">
+								<p><i class="far fa-check-circle"></i> Educação Infatil</p>
+								<p><i class="far fa-check-circle"></i> Ensino Fundamental</p> 
+							</div>
+						</div>	
+					</h2>
+				</li>
 			</ul>
 			<!-- <div class="mascara"></div> -->
 		</div>
@@ -61,7 +72,7 @@
 						<a href="">
 							<i class="fas fa-graduation-cap"></i>
 							<h2>Ensino Fundamental I</h2>
-							<p>Na Educação Infantil, nosso trabalho tem por objetivo propiciar a ampliação dos interesses e conhecimentos das crianças.</p>
+							<p>Um das finalidades é o desenvolvimento dos alunos nas áreas afetiva, física, cognitiva, ética, estética, pessoal e de inserção social.</p>
 						</a>	
 					</li>
 					<li class="verde-2">
