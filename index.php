@@ -126,49 +126,63 @@
 				<div class="btn-bloco"><a href="" class="btn-solicitar">Pré-Matricula</a></div>
 			</div>
 		</div>
-	</div>
 
 
-	<div id="contato">
-		<div class="limite">
-			<h2>Contato</h2>
-			<div class="formulario-contato" id="sucesso">
-				<form id="form-contato">
-					<div class="form-esquerda">
-						<label for="nome">
-							<input type="text" id="nome" name="nome" placeholder="Nome" required>
-						</label>
-						<label for="email">
-							<input type="text" id="email" name="email" placeholder="E-Mail" required>
-						</label>
-						<label for="assunto">
-							<input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
-						</label>
-					</div>
-					<div class="form-direita">
-						<label for="mensagem">
-							<textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
-						</label>
-					</div>	
-					<button>Enviar</button>
-				</form>
-			</div>
 
-		</div>		
-	</div>
+		<div id="contato">
+			<div class="limite">
+				<h2>Contato</h2>
+				<div class="formulario-contato" id="sucesso">
+					<form id="form-contato">
+						<div class="form-esquerda">
+							<label for="nome">
+								<input type="text" id="nome" name="nome" placeholder="Nome" required>
+							</label>
+							<label for="email">
+								<input type="text" id="email" name="email" placeholder="E-Mail" required>
+							</label>
+							<label for="assunto">
+								<input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+							</label>
+						</div>
+						<div class="form-direita">
+							<label for="mensagem">
+								<textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+							</label>
+						</div>	
+						<button>Enviar</button>
+					</form>
+				</div>
 
-	<section id="informacoes">
-		<div class="limite">
-			<ul>
-				<li><i class="fab fa-whatsapp"></i> <span>(92) 3343-3880</span></li>
-				<li><i class="far fa-envelope"></i> <span>contato@escolacead.com.br</span></li>
-				<li><i class="fas fa-map-marker-alt"></i> <span>Rua Santa Rita, Compensa II<br> CEP 69.035-300, Manaus/AM</span></li>
-			</ul>
-
+			</div>		
 		</div>
-	</section>
 
-	<div id="mapa"></div>
+		<div id="informacoes">
+			<div class="limite">
+				<ul>
+					<li><i class="fab fa-whatsapp"></i> <span>(92) 3343-3880</span></li>
+					<li><i class="far fa-envelope"></i> <span>contato@escolacead.com.br</span></li>
+					<li><i class="fas fa-map-marker-alt"></i> <span>Rua Santa Rita, Compensa II<br> CEP 69.035-300, Manaus/AM</span></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div id="mapa"></div>
+
+		 <div class="rede-social">
+			<ul>
+				<li><a href="https://www.facebook.com/cead.educacao" class="box-facebook" alt="Facebook Escola CEAD" target="_black"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="" class="box-instagram" alt="Instagram Escola CEAD"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCWs5wMmulgy_SFt6_Zc2Zjg" class="box-youtube" alt="Youtube Escola CEAD" target="_black"><i class="fab fa-youtube"></i></a></li>
+				<li><a href="#contato" class="box-email para-id" alt="Email Escola CEAD"><i class="far fa-envelope"></i></a></li>
+				<li><a href="#informacoes" class="box-localizacao para-id" alt="Localização Escola CEAD"><i class="fas fa-map-marked-alt"></i></a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	
 	
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>

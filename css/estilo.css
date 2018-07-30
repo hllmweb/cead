@@ -628,3 +628,62 @@ Fazer listar desordenada com before e after personalizado
     transform: translateX(0) scale(1);
   }
 }
+
+.rede-social {
+    width: 50px;
+ 
+    display: inline-block;
+    vertical-align: middle;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	position: fixed;
+	z-index: 9999;
+	right: 0;
+	top:30%;
+	text-decoration: none;
+}
+.rede-social ul{
+	list-style: none;
+}
+.rede-social li{
+	padding: 0;
+	margin: 0;
+}
+.rede-social a{
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	padding: 10px 0;
+	 font-size: 18px;
+}
+.rede-social a.box-facebook{
+	background-color: #3B5998;
+	color: #FFF;
+}
+.rede-social a.box-instagram{
+	background-color: #F25841;
+	color: #FFF;
+}
+.rede-social a.box-youtube{
+	background-color: #FB0007;
+	color: #FFF;
+}
+.rede-social a.box-email{
+	background-color: #3D73BA;
+	color: #FFF;
+}
+.rede-social a.box-localizacao{
+	background-color: #9ccf51;
+	color: #FFF;
+}
+.rede-social img {
+    margin: 6px 2px;
+    transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+}
+.rede-social:hover{
+	background-color: rgba(89,135,48,1);
+}
