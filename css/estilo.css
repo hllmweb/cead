@@ -542,7 +542,7 @@ Fazer listar desordenada com before e after personalizado
     content: "";
 }
 #pagina-detalhe{
-	min-height: 400px;
+	/* min-height: 400px; */
 	background-color: #FFF;
 }
 .menu-item{
@@ -664,7 +664,7 @@ Fazer listar desordenada com before e after personalizado
 	color: #FFF;
 }
 .rede-social a.box-instagram{
-	background-color: #F25841;
+	background-color: #D60163;
 	color: #FFF;
 }
 .rede-social a.box-youtube{
@@ -684,6 +684,68 @@ Fazer listar desordenada com before e after personalizado
     transition-duration: 0.2s;
 	-webkit-transition-duration: 0.2s;
 }
-.rede-social:hover{
-	background-color: rgba(89,135,48,1);
+.rede-social a:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+.info-esquerda, 
+.info-direita{
+	vertical-align: top;
+	display: inline-block;
+	margin: 30px 0;
+}
+.info-esquerda{
+	width: 70%;
+}
+.info-direita{
+	width: 25%;
+	margin-left: 5%;
+}
+.foto-pagina{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.foto-pagina img{
+	width: 100%;
+}
+.conteudo-pagina p{
+	font-size: 16px;
+	text-align: justify;
+	font-family: 'Lato', sans-serif;
+	color: #00113a;
+	line-height: 24px;
+	display: block;
+	margin-bottom: 20px;
+}
+.conteudo-pagina strong{
+	text-transform: uppercase;
+}
+.recuo{
+	text-indent: 4em;
+}
+.titulo-sidebar{
+	background-color: #efefef;
+	margin: 0 0 20px;
+    padding: 13px 20px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.titulo-sidebar h3{
+	font-family: 'Lato', sans-serif;
+	color: #434a54;
+	font-size: 18px;
+	font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.itens-sidebar{
+	list-style: none;
+}
+.itens-sidebar li{
+	padding:5px 10px;
+	margin: 0;
+	font-size: 16px;
+	color: #656f73;
+}
+.itens-sidebar li i{
+	margin-right: 8px;
 }

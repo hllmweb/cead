@@ -40,67 +40,18 @@
 			</div>
 		</div>
 		
-		<div id="banner">
-			<ul>
-				<li>
-					<a href=""><img src="img/bg2.jpg" width="100%"></a>
-					<h2 class="titulo-topo fadeInRightSm animated">
-						<div class="bg"><span>Faça a Pré-Matricula de Seu Filho</span></div> 
-						<div class="texto-info-topo">
-							<div class="right">
-								<p><i class="far fa-check-circle"></i> Educação Infatil</p>
-								<p><i class="far fa-check-circle"></i> Ensino Fundamental</p> 
-							</div>
-						</div>	
-					</h2>
-				</li>
-			</ul>
-			<!-- <div class="mascara"></div> -->
+		<div id="pagina-titulo">
+			<div class="limite">
+				<h2><a href="">A Escola</a> <span></span></h2>
+			</div>
+		</div>
+
+		<div id="pagina-detalhe">
+			<div class="limite">
+				
+			</div>
 		</div>
 		
-		<div id="servicos">
-			<div class="limite">
-				<ul>
-					<li class="azul">
-						<a href="">
-							<i class="fas fa-graduation-cap"></i>
-							<h2>Educação Infantil</h2>
-							<p>Na Educação Infantil, nosso trabalho tem por objetivo propiciar a ampliação dos interesses e conhecimentos das crianças.</p>
-						</a>
-					</li>
-					<li class="verde-1">
-						<a href="">
-							<i class="fas fa-graduation-cap"></i>
-							<h2>Ensino Fundamental I</h2>
-							<p>Um das finalidades é o desenvolvimento dos alunos nas áreas afetiva, física, cognitiva, ética, estética, pessoal e de inserção social.</p>
-						</a>	
-					</li>
-					<li class="verde-2">
-						<a href="">
-							<i class="fas fa-graduation-cap"></i>
-							<h2>Projeto Pedagógico</h2>
-							<p>As atividades são elaboradas com base na metodologia de ensino sócio interacionista.</p>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-
-		<div id="estrutura">
-			<div class="limite">
-				<h2>Nossa Estrutura</h2>
-				<ul class="menu-item">
-					<li><a href=""><img src="img/estrutura-9.png" alt=""></a></li>
-					<li><a href=""><img src="img/estrutura-1.jpg" alt=""></a></li>
-					<li><a href=""><img src="img/estrutura-3.jpg" alt=""></a></li>
-					<li><a href=""><img src="img/estrutura-8.jpg" alt=""></a></li>
-					<li><a href=""><img src="img/estrutura-5.jpg" alt=""></a></li>
-					<li><a href=""><img src="img/estrutura-6.jpg" alt=""></a></li>
-				</ul>
-			</div>
-		</div>
-
 
 
 
@@ -169,8 +120,8 @@
 		</div>
 
 		<div id="mapa"></div>
-
-		 <div class="rede-social">
+	
+		<div class="rede-social">
 			<ul>
 				<li><a href="https://www.facebook.com/cead.educacao" class="box-facebook" alt="Facebook Escola CEAD" target="_black"><i class="fab fa-facebook-f"></i></a></li>
 				<li><a href="https://www.instagram.com/cead.educacao.amor/" class="box-instagram" alt="Instagram Escola CEAD" target="_black"><i class="fab fa-instagram"></i></a></li>
@@ -179,11 +130,10 @@
 				<li><a href="#informacoes" class="box-localizacao para-id" alt="Localização Escola CEAD"><i class="fas fa-map-marked-alt"></i></a></li>
 			</ul>
 		</div>
+
+		
 	</div>
 
-
-	
-	
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/site.js?v=<? time(); ?>"></script>

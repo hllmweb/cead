@@ -22,8 +22,8 @@
 						<ul>
 							<li><a href="index">Início</a></li>
 							<li><a href="escola">A Escola</a></li>
-							<li><a href="">Educação Infantil</a></li>
-							<li><a href="">Ensino Fundamental</a></li>
+							<li><a href="educacao-infantil">Educação Infantil</a></li>
+							<li><a href="ensino-fundamental-1">Ensino Fundamental</a></li>
 							<li class="com-submenu">
 								<a href="#"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Proposta</a>
 								<ul>
@@ -48,7 +48,29 @@
 
 		<div id="pagina-detalhe">
 			<div class="limite">
-				
+				<div class="info-esquerda">
+					<div class="foto-pagina">
+						<img src="img/estrutura-frente.png" alt="CEAD - Educação Infantil">
+					</div>
+					<div class="conteudo-pagina">
+						<p class="recuo">O <strong>Centro Educacional Amor Divino</strong> iniciou suas atividades há 3 anos, dirigido por Ericarlos Rocha e tendo como principal objetivo contribuir com o desenvolvimento de crianças por meio de uma educação de qualidade.</p>
+						<p>Atualmente a escola leciona da educação infantil ao ensino fundamental I. A equipe docente é formada por profissionais altamente qualificados para tratar do desenvolvimento de crianças com capacidades e habilidades distintas.</p>
+						<p>Para compor o caráter de crianças capazes de conviver em sociedade valores como consciência, compromisso, respeito, responsabilidade, disciplina são abordados e estimulados diariamente. Com isso, a escola entende que estes alunos serão pessoas conscientes de seus direitos e deveres.</p>
+					</div>
+				</div>
+
+				<div class="info-direita">
+					<div class="titulo-sidebar">
+						<h3>Contatos</h3>
+					</div>		
+					<ul class="itens-sidebar">
+						<li><i class="fas fa-map-marker-alt"></i>  Rua Santa Rita, Compensa II - CEP 69.035-300, Manaus/AM</li>
+						<li><i class="far fa-clock"></i> Segunda - Sexta: 7:00 am - 18:00 pm</li>
+						<li><i class="fas fa-at"></i> contato@escolacead.com.br</li>
+						<li><i class="fas fa-phone"></i>  (92) 3343-3880</li>
+					</ul>
+				</div>
+			
 			</div>
 		</div>
 		
@@ -77,50 +99,63 @@
 				<div class="btn-bloco"><a href="" class="btn-solicitar">Pré-Matricula</a></div>
 			</div>
 		</div>
-	</div>
 
 
-	<div id="contato">
-		<div class="limite">
-			<h2>Contato</h2>
-			<div class="formulario-contato" id="sucesso">
-				<form id="form-contato">
-					<div class="form-esquerda">
-						<label for="nome">
-							<input type="text" id="nome" name="nome" placeholder="Nome" required>
-						</label>
-						<label for="email">
-							<input type="text" id="email" name="email" placeholder="E-Mail" required>
-						</label>
-						<label for="assunto">
-							<input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
-						</label>
-					</div>
-					<div class="form-direita">
-						<label for="mensagem">
-							<textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
-						</label>
-					</div>	
-					<button>Enviar</button>
-				</form>
-			</div>
 
-		</div>		
-	</div>
+		<div id="contato">
+			<div class="limite">
+				<h2>Contato</h2>
+				<div class="formulario-contato" id="sucesso">
+					<form id="form-contato">
+						<div class="form-esquerda">
+							<label for="nome">
+								<input type="text" id="nome" name="nome" placeholder="Nome" required>
+							</label>
+							<label for="email">
+								<input type="text" id="email" name="email" placeholder="E-Mail" required>
+							</label>
+							<label for="assunto">
+								<input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+							</label>
+						</div>
+						<div class="form-direita">
+							<label for="mensagem">
+								<textarea name="mensagem" id="mensagem" placeholder="Mensagem" required></textarea>
+							</label>
+						</div>	
+						<button>Enviar</button>
+					</form>
+				</div>
 
-	<section id="informacoes">
-		<div class="limite">
-			<ul>
-				<li><i class="fab fa-whatsapp"></i> <span>(92) 3343-3880</span></li>
-				<li><i class="far fa-envelope"></i> <span>contato@escolacead.com.br</span></li>
-				<li><i class="fas fa-map-marker-alt"></i> <span>Rua Santa Rita, Compensa II<br> CEP 69.035-300, Manaus/AM</span></li>
-			</ul>
-
+			</div>		
 		</div>
-	</section>
 
-	<div id="mapa"></div>
+		<div id="informacoes">
+			<div class="limite">
+				<ul>
+					<li><i class="fab fa-whatsapp"></i> <span>(92) 3343-3880</span></li>
+					<li><i class="far fa-envelope"></i> <span>contato@escolacead.com.br</span></li>
+					<li><i class="fas fa-map-marker-alt"></i> <span>Rua Santa Rita, Compensa II<br> CEP 69.035-300, Manaus/AM</span></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div id="mapa"></div>
 	
+		<div class="rede-social">
+			<ul>
+				<li><a href="https://www.facebook.com/cead.educacao" class="box-facebook" alt="Facebook Escola CEAD" target="_black"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="https://www.instagram.com/cead.educacao.amor/" class="box-instagram" alt="Instagram Escola CEAD" target="_black"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UCWs5wMmulgy_SFt6_Zc2Zjg" class="box-youtube" alt="Youtube Escola CEAD" target="_black"><i class="fab fa-youtube"></i></a></li>
+				<li><a href="#contato" class="box-email para-id" alt="Email Escola CEAD"><i class="far fa-envelope"></i></a></li>
+				<li><a href="#informacoes" class="box-localizacao para-id" alt="Localização Escola CEAD"><i class="fas fa-map-marked-alt"></i></a></li>
+			</ul>
+		</div>
+
+		
+	</div>
+
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/site.js?v=<? time(); ?>"></script>
