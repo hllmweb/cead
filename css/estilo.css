@@ -41,7 +41,7 @@ html,body{
 }
 .fixo{
 	width: 100%;
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	z-index: 999999;
 	/*background-color: rgba(0,0,0,1) !important;*/
