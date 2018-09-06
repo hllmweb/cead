@@ -1,0 +1,22 @@
+﻿$(document).ready(function () {
+    $(".ampliar").fancybox({
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+    $(".fancybox").fancybox({
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+    $(".btMob").click(function (event) {
+        $("#menuTopo").slideToggle('2000');
+    });
+    jQuery(".fitText20").fitText(1, { minFontSize: '10px', maxFontSize: '20px' });
+    jQuery(".fitText26").fitText(1, { minFontSize: '10px', maxFontSize: '26px' });
+})
+

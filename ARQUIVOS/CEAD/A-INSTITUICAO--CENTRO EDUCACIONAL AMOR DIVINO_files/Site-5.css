@@ -1,0 +1,61 @@
+
+    body {background: url(../images/bg_green.jpg) no-repeat fixed center; background-size:100%;}
+    input, input[type="text"], textarea, select {border: 1px solid #acacac; color: #222;}
+    input[type="button"], input[type="submit"] {background-color: #fff;border: 1px solid #acacac;color: #000;border-radius: 5px;}
+    .box-video .data, .box-noticia .data {color: #f2dab8;}
+    .box-galeria .carousel a,.box-video .info p a, .box-noticia .info em {color: #FFFFFF;}
+    .box-galeria h2,.box-video h2,.box-personal h2 {color: #ca3b8d;}
+    .box-noticia .titulo a, .box-video .titulo a {color: #FFFFFF;font: 400 15px/15px Lato, Arial, sans-serif;}
+    .box-noticia, .box-video, .box-galeria, .box-home {background: #6bc364;
+}
+
+
+/*TITLE BOX*/
+    .titulo-pagina, .noticias.listaIn .titulo, .titulo-pagina .mais a, .ft32,titulo-noticia h2, .noticias.listaIn .titulo a, h3.outras, #embedMapa h2, .info-contato h2 {color: #62c1e9!important; }
+    .titulo-home {text-align: center;color: #602A28;border: none;}
+    .titulo-galeria { height: 27px;}
+    .titulo-galeria {color: #FDFDFD;background-color: #6bc364;}
+    .titulo-destaque{color: #FDFDFD;background: #6bc364;}
+    .box-cor h2 {color: #602A28;  }
+    .ft32{font-size:20px !important;margin-bottom:5px;}
+
+/*BOX*/
+.box-cor {background: #F1465F!important;-webkit-box-shadow: 1px 1px 1px 1px #ADADAD;box-shadow: 1px 1px 1px 1px #ADADAD;}
+.bg{background: url(../images/bg-container.jpg) no-repeat bottom;}
+
+/*MENU - NAV*/
+    nav ul li a:hover,nav ul li a.active {color: #000;}
+    header nav ul li a {color: #FFFFFF;}
+    nav {background: #6bc364;      }
+
+/*FOOTER*/
+    footer {background: #6bc364;}
+    footer a.dados-endereco-nome {}
+    footer .container a {color: #ffffff!important;}
+
+/*CALENDARIO*/
+
+.ll-skin-melon .ui-datepicker-header {
+  background: #6bc364!IMPORTANT;
+}
+.ui-datepicker table thead {
+  background-color: #51a34a!important;
+}
+
+.ll-skin-melon td .ui-state-active, .ll-skin-melon td .ui-state-hover {
+  background: #51a34a!important;
+  color: #ffffff;
+}
+
+/*LISTA MODELO 2*/
+
+    .listaItens3 li .info {padding:0;}
+
+
+/*RESPONSIVE MENU*/
+@media (max-width:980px) {
+    *.menuResp-980 {
+        opacity: 0.8;
+        background: rgba(255,255,255,0.35);
+    }
+}

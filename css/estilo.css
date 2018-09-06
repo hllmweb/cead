@@ -250,7 +250,7 @@ a.btn-solicitar-topo{
 #matricula{
 	display: block;
 	position: relative;
-    min-height: 500px;
+    min-height: 600px;
     height: 100%;
     overflow: hidden;
 }
@@ -461,6 +461,7 @@ Fazer listar desordenada com before e after personalizado
 	border-radius:12px;
 	-webkit-border-radius:12px;
 	cursor:pointer;	
+  outline:none;
 }
 #contato .formulario-contato button:hover{
 	background: linear-gradient(#081156,#081156);
@@ -542,7 +543,6 @@ Fazer listar desordenada com before e after personalizado
     content: "";
 }
 #pagina-detalhe{
-	/* min-height: 400px; */
 	background-color: #FFF;
 }
 .menu-item{
@@ -659,10 +659,15 @@ Fazer listar desordenada com before e after personalizado
 	padding: 10px 0;
 	 font-size: 18px;
 }
+.rede-social a.box-whatsapp{
+  background-color:#2AAE1D;
+  color:#FFF;
+}
 .rede-social a.box-facebook{
 	background-color: #3B5998;
 	color: #FFF;
 }
+
 .rede-social a.box-instagram{
 	background-color: #D60163;
 	color: #FFF;
@@ -672,11 +677,11 @@ Fazer listar desordenada com before e after personalizado
 	color: #FFF;
 }
 .rede-social a.box-email{
-	background-color: #3D73BA;
+	background-color: #FC5B03;
 	color: #FFF;
 }
 .rede-social a.box-localizacao{
-	background-color: #9ccf51;
+	background-color: #E3B102;
 	color: #FFF;
 }
 .rede-social img {
@@ -707,6 +712,13 @@ Fazer listar desordenada com before e after personalizado
 .foto-pagina img{
 	width: 100%;
 }
+
+#slide-pagina{
+	width: 100%;
+}
+#slide-pagina img{
+	width: 100%;
+}
 .conteudo-pagina p{
 	font-size: 16px;
 	text-align: justify;
@@ -718,6 +730,11 @@ Fazer listar desordenada com before e after personalizado
 }
 .conteudo-pagina strong{
 	text-transform: uppercase;
+}
+.conteudo-pagina h3{
+	font-size:18px;
+	font-weight: bold;
+	padding:5px 0;
 }
 .recuo{
 	text-indent: 4em;
@@ -745,7 +762,254 @@ Fazer listar desordenada com before e after personalizado
 	margin: 0;
 	font-size: 16px;
 	color: #656f73;
+	text-decoration: none;
+}
+.itens-sidebar a{
+	text-decoration: none;
+	color: #656f73;
 }
 .itens-sidebar li i{
 	margin-right: 8px;
+}
+
+.modal{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:#e0e0e1;
+	z-index:99999999;
+	padding-top:20px;
+	padding-bottom:-20px;
+	display:none;
+}
+.modal_logo{
+	text-align:center;
+	padding:20px;
+}
+.modal_logo img{
+	height:90px;
+}
+.modal_sair{
+	position:absolute;
+	top:30px;
+	right:30px;
+	font-size:30px;
+	color:#5BAD49;
+	cursor:pointer;
+	width:50px;
+	height:50px;
+	text-align:center;
+	z-index:9999999999;
+}
+.modal_voltar{
+	position:absolute;
+	top:30px;
+	right:30px;
+	font-size:30px;
+	color:#5BAD49;
+	cursor:pointer;
+	width:190px;
+	height:50px;
+	text-align:center;
+	z-index:9999999999;
+}
+.modal_voltar a{
+	text-decoration: none;
+	color:#5BAD49;
+}
+.modal_corpo{
+	width:80%;
+	box-sizing:border-box;
+	background:#c9cacb;
+	margin:20px auto;
+	font-size:0;
+}
+.modal_corpo.login{
+	margin:0px auto;
+}
+.modal_header{
+	background:#06263E;
+	padding:20px;
+	box-sizing:border-box;
+	color:#fff;
+	margin-bottom:40px;
+	font-size:16px;
+}
+.modal_footer{
+	width:100%;
+	padding:10px 0;
+	background:#06263E;
+	margin-top:20px;
+}
+.coluna_modal{
+	width:50%;
+	font-size:16px;
+	display:inline-block;
+	text-align:center;
+	vertical-align:top;
+}
+
+.coluna_modal.pre_matricula{
+	margin:auto;
+	display:block;
+	/* background:#fff; */
+	width:800px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+.coluna_modal h2{
+	font-size:1.2em;
+	color:#06263E;
+}
+.coluna_modal.pre_matricula h2{
+	color:rgba(0,0,0,0.4);
+}
+.coluna_modal form input{
+	padding:10px;
+	background:#fff;
+	border:1px solid rgba(0,0,0,0.2);
+	display:inline-block;
+	width:calc(70% - 50px);
+	margin:15px auto 5px auto;
+	font-size:17px;
+	box-sizing:border-box;
+	border-right:0px;
+}
+.input_box{
+	font-size:0;
+}
+.modal_input_icone{
+	width:30px;
+	padding:12px;
+	border:1px solid rgba(0,0,0,0.2);
+	border-left:0px;
+	font-size:13px;
+	display:inline-block;
+	background:#fff;
+	color:rgba(0,0,0,0.4);
+}
+.bottom_form{
+	width:70%;
+	margin:auto;
+	position:relative;
+	height:45px;
+	margin-top:10px;
+}
+
+.bottom_form button{
+	position:absolute;
+	right:45%;
+	top:0;
+	background:#5BAD49;
+	color:#fff;
+	cursor:pointer;
+	border:0px;
+	border-radius: 12px;
+    -webkit-border-radius: 12px;
+	margin:0px;
+	font-size:18px;
+	font-weight: 600;
+	padding: 15px 20px;	
+	outline: none;
+}
+
+.lembrar_input{
+	position:absolute;
+	width:calc(100% - 90px);
+	padding:14px 0px;
+	text-align:left;
+	box-sizing:border-box;
+	color:#06263E;
+	font-size:15px;
+}
+
+.lembrar_input input[type="checkbox"]{
+	display:none;
+}
+
+.lembrar_input label{
+	cursor:pointer;
+}
+.lembrar_input input[type="checkbox"] + label:before{
+	font:normal normal normal 15px FontAwesome;
+	content:"\f00c";
+	margin-right:5px;
+	color:transparent;
+	height:15px;
+	width:15px;
+	border:1px solid black;
+	font-size:20px;
+	display:inline-block;
+	line-height:15px;
+	background:#fff;
+}
+.lembrar_input input[type="checkbox"]:checked + label:before{
+	font:normal normal normal 15px FontAwesome;
+	content:"\f00c";
+	margin-right:5px;
+	color:#f49839;
+	display:inline-block;
+	height:15px;
+	width:15px;
+	line-height:15px;
+	text-align:center;
+	border:1px solid black;
+	background:#fff;
+	font-size:20px;
+}
+.lista-nao-ordenada{
+	list-style: none;
+	display: block;
+}
+.lista-nao-ordenada li{
+	font-size:16px;
+	margin:0;
+	padding:5px 0;
+}
+#sucesso-servico p{
+	font-size:18px;
+	color:#0b1672;
+}
+.msg-sucesso-contato{
+  padding:20px;
+	font-size:22px;
+	color:#FFF;
+	text-align: center;
+}
+.msg-sucesso{
+	margin:auto;
+	width: 600px;
+	padding:20px;
+	font-size:18px;
+	color:#0b1672;
+	text-align: center;
+}
+.msg-sucesso,
+.msg-sucesso i{
+	display: block;
+	color:#0b1672;
+}
+.msg-sucesso-icon i{
+	display: block;
+	font-size:120px;
+	margin-bottom: 20px;
+}
+.msg-sucesso-p{
+	margin:auto;
+	width: 600px;
+	padding:20px;
+	font-size:18px;
+	color:#0b1672;
+	text-align: left;
+}
+.msg-sucesso-aluno,
+.msg-sucesso-responsavel{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+.msg-sucesso-responsavel{
+	margin-left:40px;
 }

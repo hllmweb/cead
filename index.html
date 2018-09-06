@@ -6,8 +6,8 @@
 
 	
 	<!--css-->
-	<link rel="stylesheet" href="css/estilo.css">
-	<link rel="stylesheet" href="css/componentes.css">
+	<link rel="stylesheet" href="css/estilo.css?v=<?= time(); ?>">
+	<link rel="stylesheet" href="css/componentes.css?v=<?= time(); ?>">
 	<!--plugins-->
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/all.css">
@@ -22,8 +22,8 @@
 						<ul>
 							<li><a href="index">Início</a></li>
 							<li><a href="escola">A Escola</a></li>
-							<li><a href="">Educação Infantil</a></li>
-							<li><a href="">Ensino Fundamental</a></li>
+							<li><a href="educacao-infantil">Educação Infantil</a></li>
+							<li><a href="ensino-fundamental-i">Ensino Fundamental</a></li>
 							<li class="com-submenu">
 								<a href="#"><div class="menu-seta"><i class="fas fa-chevron-down"></i></div> Proposta</a>
 								<ul>
@@ -35,7 +35,7 @@
 							<li><a href="#contato" class="para-id">Contato</a></li>
 						</ul>
 					</nav>
-					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id"><i class="fas fa-graduation-cap"></i> Pré-Matricula</a></div>
+					<div class="menu-topo"><a href="#matricula" class="btn-solicitar-topo para-id"><i class="fas fa-graduation-cap"></i> Pré-Matrícula</a></div>
 				</div>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 				<li>
 					<a href=""><img src="img/bg2.jpg" width="100%"></a>
 					<h2 class="titulo-topo fadeInRightSm animated">
-						<div class="bg"><span>Faça a Pré-Matricula de Seu Filho</span></div> 
+						<div class="bg"><span>Faça a Pré-Matrícula de Seu Filho</span></div> 
 						<div class="texto-info-topo">
 							<div class="right">
 								<p><i class="far fa-check-circle"></i> Educação Infatil</p>
@@ -62,17 +62,17 @@
 			<div class="limite">
 				<ul>
 					<li class="azul">
-						<a href="">
+						<a href="educacao-infantil">
 							<i class="fas fa-graduation-cap"></i>
 							<h2>Educação Infantil</h2>
 							<p>Na Educação Infantil, nosso trabalho tem por objetivo propiciar a ampliação dos interesses e conhecimentos das crianças.</p>
 						</a>
 					</li>
 					<li class="verde-1">
-						<a href="">
+						<a href="ensino-fundamental-i">
 							<i class="fas fa-graduation-cap"></i>
 							<h2>Ensino Fundamental I</h2>
-							<p>Um das finalidades é o desenvolvimento dos alunos nas áreas afetiva, física, cognitiva, ética, estética, pessoal e de inserção social.</p>
+							<p>Uma das finalidades é o desenvolvimento dos alunos nas áreas afetiva, física, cognitiva, ética, estética, pessoal e de inserção social.</p>
 						</a>	
 					</li>
 					<li class="verde-2">
@@ -123,7 +123,7 @@
 					<li>Comprovante de Residência</li>
 				</ul>
 
-				<div class="btn-bloco"><a href="" class="btn-solicitar">Pré-Matricula</a></div>
+				<div class="btn-bloco"><a href="" class="btn-solicitar">Pré-Matrícula</a></div>
 			</div>
 		</div>
 
@@ -173,7 +173,7 @@
 		 <div class="rede-social">
 			<ul>
 				<li><a href="https://www.facebook.com/cead.educacao" class="box-facebook" alt="Facebook Escola CEAD" target="_black"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="" class="box-instagram" alt="Instagram Escola CEAD"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://www.instagram.com/cead.educacao.amor/" class="box-instagram" alt="Instagram Escola CEAD" target="_black"><i class="fab fa-instagram"></i></a></li>
 				<li><a href="https://www.youtube.com/channel/UCWs5wMmulgy_SFt6_Zc2Zjg" class="box-youtube" alt="Youtube Escola CEAD" target="_black"><i class="fab fa-youtube"></i></a></li>
 				<li><a href="#contato" class="box-email para-id" alt="Email Escola CEAD"><i class="far fa-envelope"></i></a></li>
 				<li><a href="#informacoes" class="box-localizacao para-id" alt="Localização Escola CEAD"><i class="fas fa-map-marked-alt"></i></a></li>
@@ -186,6 +186,6 @@
 	
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
-	<script src="js/site.js"></script>
+	<script src="js/site.js?v=<? time(); ?>"></script>
 </body>
 </html>

@@ -1,0 +1,127 @@
+﻿.paginas-conteudo span h1 {
+    font-size:22px;
+    padding:initial;
+    border:initial;
+    color: initial;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.paginas-conteudo span h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.paginas-conteudo span ul, .paginas-conteudo span ul li, .paginas-conteudo span ol,  .paginas-conteudo span ol li {
+    color: inherit;
+    list-style:inherit;
+    padding:initial;
+    margin:initial;
+    line-height:1.5em;
+    font-size:initial;
+    list-style-position:initial;
+}
+
+.paginas-conteudo span ul, .paginas-conteudo span ol{
+    margin-left:2.5em;
+    margin-bottom:1.5em;
+    margin-top:1.2em;
+}
+
+.paginas-conteudo span ol{  
+    list-style:decimal;
+}
+
+.paginas-conteudo span ol ol{  
+    list-style:upper-roman;
+}
+
+.paginas-conteudo span ul{  
+    list-style:initial;
+}
+
+.paginas-conteudo span sup {
+vertical-align:super;
+}
+
+.paginas-conteudo span sub {
+vertical-align:sub;
+}
+
+
+.paginas-conteudo span ul li a {
+    color:inherit;
+    font-size:inherit;
+    text-decoration:none;
+}
+
+.paginas-conteudo span p {
+    color: inherit;
+    text-decoration: none;
+    padding:initial;
+    background:none;
+    background-color:none;
+}
+
+.paginas-conteudo table , .paginas-conteudo table td {
+    border:1px solid #ccc;
+}
+
+.paginas-conteudo table td {
+    padding-left:5px;
+}
+
+.paginas-conteudo .noticia p:first-child {
+background-color: none !important;
+}
+.paginas-conteudo table td p {
+    background:none;
+    background-color:none;
+}
+
+#rodape_cont .rodape_cont_topo .col_esq {
+    max-width:610px;
+}
+
+#rodape_cont .rodape_cont_topo .col_dir {
+width:250px !important;
+}
+
+#rodape_cont .rodape_cont_topo .col_dir .logo {
+width:90px !important;
+}
+
+*[align="center"] {
+	text-align: center !important;
+}
+
+*[align="left"] {
+	text-align: left !important;
+}
+
+*[align="right"] {
+	text-align: right !important;
+}
+
+*[align="justify"] {
+	text-align: justify !important;
+}
+
+b, strong {
+    font-weight: bold !important;
+}
+
+i, em {
+    font-style: italic !important;
+}
+
+u {
+    text-decoration: underline !important;
+}
+
+*[border="1"] {
+    border-width: 1px !important;
+}
+
+
+

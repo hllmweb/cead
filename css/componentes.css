@@ -15,7 +15,11 @@
 }
 .bx-wrapper img{
 	position: absolute;
-	top: -30%;
+	/* top: -30%; */
+}
+#slide-pagina .bx-wrapper img{
+	position: absolute;
+	top: 0% !important;
 }
 .bx-wrapper{
 	padding: 0;

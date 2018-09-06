@@ -1,0 +1,92 @@
+﻿function menuResponsivo(idMenu, containerSite, breakpoint) {
+
+	/*
+		gatilho			> Classe / id do item que é clicado para abrir o menu
+		idMenu			> id (pode ser tag 'nav') que contém o menu
+		containerSite	> div que contenha todo o site, usado para movê-lo
+		breakpoint		> valores possíveis: 980, 720, 640 ou 560
+	*/
+	
+	$(idMenu).addClass("menuResp");
+
+	
+
+	var velocidade = 400;
+	
+
+	if (breakpoint == "980") {
+		$(idMenu).addClass("menuResp-980");
+		$(idMenu).before("<a class='menuResp-bt menuResp-bt-980 glyphicon glyphicon-align-justify'>&nbsp;</a>");
+		$(idMenu).after("<div class='menuResp-bg menuResp-bg-980 cor1'>&nbsp;</div>");
+	} else if (breakpoint == "720") {
+		$(idMenu).addClass("menuResp-720");
+		$(idMenu).prepend("<a class='menuResp-bt menuResp-bt-720 glyphicon glyphicon-align-justify'>&nbsp;</a>");
+		$(idMenu).after("<div class='menuResp-bg menuResp-bg-720 cor1'>&nbsp;</div>");
+	} else if (breakpoint == "640") {
+		$(idMenu).addClass("menuResp-640");
+		$(idMenu).prepend("<a class='menuResp-bt menuResp-bt-640 glyphicon glyphicon-align-justify'>&nbsp;</a>");
+		$(idMenu).after("<div class='menuResp-bg menuResp-bg-640 cor1'>&nbsp;</div>");
+	} else if (breakpoint == "560") {
+		$(idMenu).addClass("menuResp-560");
+		$(idMenu).prepend("<a class='menuResp-bt menuResp-bt-560 glyphicon glyphicon-align-justify'>&nbsp;</a>");
+		$(idMenu).after("<div class='menuResp-bg menuResp-bg-560 cor1'>&nbsp;</div>");
+	}
+
+	var corBg = $(idMenu).css("background-color");
+	$(".menuResp-bg").css("background-color", corBg).css("opacity","0.8");
+
+	//var clickBody = "";
+
+	$(".menuResp-bt").click(function () {
+	//	clickBody = "ativo";
+		posicao = $(containerSite).css("right").replace(/[^-\d\.]/g, '');
+		distancia = $(idMenu).outerWidth();
+
+		//	alert("Posição: "+posicao+" | Distância: "+distancia);
+
+		if (posicao == 0) {
+			$(idMenu).animate({ right: 0 }, velocidade);
+			$(containerSite).animate({ right: distancia }, velocidade);
+		} else if (posicao > 0) {
+			$(idMenu).animate({ right: (distancia * -1) }, velocidade);
+			$(containerSite).animate({ right: 0 }, velocidade);
+		}
+	});
+	$(containerSite).click(function () {
+		/*	$(idMenu).css("right",(distancia * -1));
+			$(containerSite).css("right",0);	*/
+		//	alert(clickBody);
+		
+		
+			posicao = $(containerSite).css("right").replace(/[^-\d\.]/g, '');
+			distancia = $(idMenu).outerWidth();
+			if (posicao == 0) {
+				nada = "coisa nenhuma";
+			} else if (posicao > 0) {
+				$(idMenu).animate({ right: (distancia * -1) }, velocidade);
+				$(containerSite).animate({ right: 0 }, velocidade);
+			}
+		
+	});
+	$(window).resize(function () {
+		posicao = $(containerSite).css("right").replace(/[^-\d\.]/g, '');
+		distancia = $(idMenu).outerWidth();
+		$(containerSite).removeAttr('style');
+		if (posicao > 0) {
+		//	$(idMenu).css("right", "auto");
+			$(idMenu).removeAttr('style');
+			largJanela = $("body").outerWidth();
+			if (largJanela > breakpoint) {
+				
+				$(containerSite).css("right", "auto");
+			}
+		}
+		
+		larguraTela = $(window).outerWidth();
+
+		if (larguraTela > breakpoint) {
+		//	$(idMenu).css("right", "auto");
+			$(idMenu).removeAttr('style');
+		}
+	});
+}

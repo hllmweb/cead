@@ -1,0 +1,79 @@
+﻿// função para remover ascentos
+function removerAcentos(newStringComAcento) {
+    var string = newStringComAcento;
+    var mapaAcentosHex = {
+        a: /[\xE0-\xE6]/g,
+        e: /[\xE8-\xEB]/g,
+        i: /[\xEC-\xEF]/g,
+        o: /[\xF2-\xF6]/g,
+        u: /[\xF9-\xFC]/g,
+        c: /\xE7/g,
+        n: /\xF1/g
+
+    };
+
+    for (var letra in mapaAcentosHex) {
+        var expressaoRegular = mapaAcentosHex[letra];
+        string = string.replace(expressaoRegular, letra);
+    }
+
+    return string;
+}
+
+function menuActive() {
+    // define a variavel que recebe a url da pagina
+    var pathname = window.location.pathname;
+    // define a variavel que recebe os seletores
+    var selectors = "header ul li a, nav ul li a, .menu li a";
+    // pega a ultima palavra da url tira os espaços em brancos colacas as letras em minusculos e retira os caracteres especiais
+    pathname = pathname.split('/').pop().trim().toLowerCase().replace(/[^\w\s]/gi, '');
+    //adicona a class page+pathname para alguma enventualidade 
+    $("body").addClass("page-" + pathname);
+    //pecorre os itens de menu
+    $(selectors).each(function () {
+        //pega o texto do item de menu atual e tira os espaços em brancos colacas as letras em minusculos e retira os caracteres especiais
+        var textoAtual = removerAcentos($(this).text().trim().toLowerCase().replace(/\s/g, ''));
+        // compara as strings
+        if (textoAtual == pathname) {
+            //adiciona a class active
+            $(this).addClass("active");
+            //adicona a class page+pathname para alguma enventualidade 
+            $("div#Corpo, div.Corpo").addClass("page-" + textoAtual);
+        }
+    });
+}
+
+function nivelaAltura(idContainer, alvoLargura, LargAdicionalPorItem) {
+	// Este último parâmetro é opcional, é adicionado à largura de cada item na hora de comparar à largura do container
+
+	var alturaMaior = 0;
+	var largContainer = $(idContainer).outerWidth();
+	var largItens = 0;
+	var arrayItensLinha = [];
+	$(idContainer).find(alvoLargura).each(function () {
+		if (LargAdicionalPorItem) {
+			LargAdicionalPorItem = parseInt(LargAdicionalPorItem);
+			alturaItem = $(this).outerHeight() + LargAdicionalPorItem;
+		} else {
+			alturaItem = $(this).outerHeight();
+		}
+
+		if (alturaItem > alturaMaior) {
+			alturaMaior = alturaItem;
+		}
+		arrayItensLinha.push($(this));
+		largItens += $(this).outerWidth();
+	});
+	$.each(arrayItensLinha, function (n, item) {
+		arrayItensLinha[n].attr("style", "height: " + alturaMaior + "px !important;");
+	});
+}
+// Função Capitalize
+String.prototype.capitalize = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+$(document).ready(function () {
+    menuActive();
+    $(".ampliar").fancybox();
+    $(".fancybox").fancybox();
+})

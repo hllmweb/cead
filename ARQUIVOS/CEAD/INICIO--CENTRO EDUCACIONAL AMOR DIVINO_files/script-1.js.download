@@ -1,0 +1,413 @@
+﻿var trocarSenha = function trocarSenha() {
+    //e.preventDefault();
+    var action = 'http://ie-dsk-vagner:5001/api/seguranca/RecuperarSenha/';
+    var email = $("input[name='email']").val();
+
+    if (!email || email.length === 0)
+        return;
+
+    $.ajax({
+        url: action + email,
+        type: 'GET',
+        success: function (resp) {
+            $('#spnMsg').empty();
+            $('#spnMsg').append(resp.Mensagem);
+            $('#alertaTrocarSenha').slideDown();
+            setTimeout(function () { $('#alertaTrocarSenha').slideUp(); }, 4000);
+
+            setTimeout(function () { $('#ModalRecuperarSenha').modal('toggle') }, 6000);
+        }
+
+    });
+};
+
+(function () {
+    'use strict';
+
+
+
+    var portalAluno = (function () {
+
+        // Variaveis privadas
+
+        let URL_PORTAL = 'http://sgiportal.inovatio.com.br';
+        //let URL_PORTAL = 'http://eduportal.inovatio.com.br';
+        //let URL_PORTAL = 'http://ie-dsk-vagner:8090/';
+        //let URL_PORTAL = 'http://localhost:1359';
+
+        let URL_API_PORTAL = 'http://sgiapi.inovatio.com.br';
+        //let URL_API_PORTAL = 'http://ie-dsk-vagner:5001/';
+        //let URL_API_PORTAL = 'http://localhost:1583';
+
+        let URL_GERENCIADOR = 'https://sgi.inovatio.com.br';
+        //let URL_GERENCIADOR = 'http://ie-dsk-vagner';
+        //let URL_GERENCIADOR = 'http://localhost:2178';
+
+        var plugin = {
+            init: init
+        }
+
+        return plugin;
+
+        // Funções fora do scopo do plugin 
+
+        /*
+         * Função que inicia o plugin
+         */
+        function init() {
+
+            if (!window.jQuery) {
+                var jq = document.createElement('script');
+                jq.type = 'text/javascript';
+                jq.src = 'http://code.jquery.com/jquery-1.11.3.min.js';
+                document.getElementsByTagName('head')[0].appendChild(jq);
+            } else {
+                jQuery(document).ready(function ($) {
+                    $('body').prepend(createHTMLform());
+                    $('body').prepend(createHTMLformInstituicao());
+                    $('.js-container-login-portal').hide();
+                    $('.js-btn-close-form-portal').on('click', closeLogin);
+                    $('.js-btn-login-portal').on('click', showFormPortal);
+                    $('.js-btn-login-portal-ins').on('click', showFormPortalInstituicao);
+                    loginPortalInstituicao();
+                    loginPortalAluno();
+                });
+            }
+        }
+
+
+        /*
+         * Função para fechar o modal com um delay
+         */
+        function delayExit() {
+            $('.overlay-login, .js-container-login-portal').removeClass('opened').addClass('closed');
+            $("body,html").removeClass("opened-overlay");
+            $('.overlay-login, .js-container-login-portal').delay(500).queue(function (next) {
+                $(this).hide();
+                next();
+            });
+        }
+        /*
+         * Função para adicionar a funcionalidade clickOutSide, que ao clickar em qualquer área fora do modal ele é fechado.
+         */
+        function clickOutSide() {
+
+            $(document).mouseup(function (e) {
+
+                var container = $('.js-container-login-portal');
+
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    if ($('.overlay-login, .js-container-login-portal').hasClass('opened')) {
+                        delayExit();
+                    }
+                }
+            });
+
+        }
+        /*
+         * Função para posicionar o form
+         */
+        function positionModal(target) {
+            var heightForm = $(target).height();
+            var widthForm = $(target).width();
+            $(target).css({ 'top': '300px', 'margin-top': '-' + heightForm / 2 + 'px' });
+            $(target).css({ 'left': 50 + '%', 'margin-left': '-' + (widthForm / 2) + 'px' });
+        }
+
+
+        /*
+         * Função para fechar o modal.
+         */
+        function closeLogin(e) {
+            e.preventDefault();
+            delayExit();
+            $('.js-container-login-portal .form-login input').val('');
+        }
+        /*
+         * Função para exibir o modal de login
+         */
+        function showFormPortal(e) {
+            e.preventDefault();
+
+            $("body,html").addClass("opened-overlay");
+            // Chamando a função positionModal, adionando a função no dom. para o posicionamento do modal no centro da tela.
+            //positionModal();
+            positionModal('.js-container-login-portal');
+            //setando para vazio o valor dos inputs
+            $('.js-container-login-portal .form-login input').val('');
+            // dando focus no input de login
+            //$('.js-container-login-portal .form-login .txtLogin').focus();
+            //removendo a classe closed e adiocionando a opened indiciando que o modal está aberto, e para fins de css animation
+            $('.overlay-login, .js-container-login-portal').removeClass("closed").addClass("opened").show();
+            // Chamando a função clickOutSide, adionando a função no dom.
+        }
+        function showFormPortalInstituicao(e) {
+            e.preventDefault();
+
+            $("body,html").addClass("opened-overlay");
+            // Chamando a função positionModal, adionando a função no dom. para o posicionamento do modal no centro da tela.
+            //positionModal();
+            positionModal('.js-container-login-portal-inst');
+            //setando para vazio o valor dos inputs
+            $('.js-container-login-portal-inst .form-login input').val('');
+            // dando focus no input de login
+            //$('.js-container-login-portal .form-login .txtLogin').focus();
+            //removendo a classe closed e adiocionando a opened indiciando que o modal está aberto, e para fins de css animation
+            $('.overlay-login, .js-container-login-portal-inst').removeClass("closed").addClass("opened").show();
+            // Chamando a função clickOutSide, adionando a função no dom.
+        }
+        /*
+         * Função submitForm, que fecha o modal ao submter o form
+         */
+        function submitForm(e) {
+            e.preventDefault();
+            $('#LoginPortal').submit(function () {
+                // chama a função de fechar o modal
+                delayExit();
+            });
+            //loginPortalAluno();
+        }
+
+        /*
+         * Login Ajax Portal do Aluno
+         */
+        function loginPortalAluno() {
+            var form = $('#LoginPortal');
+            $('#LoginPortal').submit(function (e) {
+                e.preventDefault();
+                var login = $('#LoginPortal .txtLogin').val();
+                var senha = $('#LoginPortal .txtSenha').val();
+                $('.loading').removeClass("closed").addClass("opened");
+                $.ajax({
+                    type: 'POST',
+                    data: form.serialize(),
+                    url: URL_API_PORTAL + '/api/seguranca/autenticar',
+                    success: function (resp) {
+                        window.location.href = URL_PORTAL + '/home/LoginExterno?token=' + encodeURIComponent(resp);
+                    },
+                    error: function (error) {
+                        if (error.status == '401' && error.status != undefined) {
+                            showAlerts('Login ou Senha incorretos.', 'danger');
+                            $('.loading').removeClass("opened").addClass("closed");
+                        } else {
+                            showAlerts('Houve algum problema com um dos nossos servidores, por favor tente mais tarde.', 'danger');
+                            $('.loading').removeClass("opened").addClass("closed");
+                        }
+                    }
+                });
+            });
+        }
+
+        /*
+       * Login Ajax Portal da Instituição
+       */
+        function loginPortalInstituicao() {
+            $('#LoginPortalInt').submit(function (e) {
+                e.preventDefault();
+                $('#LoginPortalInt .loading').removeClass('closed').addClass('opened');
+                var form = $(this);
+                $.ajax({
+                    url: URL_GERENCIADOR + '/Seguranca/AutenticarExterno',
+                    type: 'POST',
+                    dataType: "json",
+                    data: form.serialize(),
+                    crossDomain: true,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (resp) {
+                        if (resp.error != '' && resp.error != undefined) {
+                            // login ou senha invalidos
+                            $('#LoginPortalInt .loading').removeClass('opened').addClass('closed');
+                            showAlerts(resp.error, 'danger', '#LoginPortalInt .container-alerts');
+                        } else if (resp.url && resp.url != undefined) {
+                            //logado com sucesso
+                            $('#LoginPortalInt .loading').removeClass('opened').addClass('closed');
+                            window.location.href = URL_GERENCIADOR + '' + resp.url;
+                        } else if (resp.length > 0 && resp != undefined) {
+                            // caso o usuário tenha mais de um perfil.
+                            $('#LoginPortalInt .loading').removeClass('opened').addClass('closed');
+                            $('#LoginPortalInt #container-form').hide();
+                            $('#LoginPortalInt #container-profiles').find('a').remove();
+                            $('#LoginPortalInt #container-profiles').show();
+                            // preenche o container com o perfil para serem exibidos.
+                            $.each(resp, function (key, value) {
+                                if (value.FL_PERFIL == 'RSP') {
+                                    $('#LoginPortalInt #container-profiles').append('<a href="#" class="list-group-item" data-idPerfil="' + value.ID_AUTENTICACAO + '">Responsavel por: ' + value.DEPENDENTE + '</a>');
+                                } else {
+                                    $('#LoginPortalInt #container-profiles').append('<a href="#" class="list-group-item" data-idPerfil="' + value.ID_AUTENTICACAO + '">' + value.PERFIL + '</a>');
+                                }
+                            });
+
+                            getRecursos();
+                        }
+                    },
+                    error: function (error) {
+                        if (error.status == 0) {
+                            window.location.href = URL_GERENCIADOR;
+                        }
+                        else
+                            if (error.status == '401' && error.status != undefined) {
+                                showAlerts('Login ou Senha incorretos.', 'danger');
+                                $('.loading').removeClass('opened').addClass('closed');
+                            } else {
+                                showAlerts('Houve algum problema com um dos nossos servidores, por favor tente mais tarde.', 'danger', '#LoginPortalInt .container-alerts');
+                                $('.loading').removeClass("opened").addClass("closed");
+                            }
+                    }
+
+                });
+            });
+        }
+        /*
+         * Função para montar os recursos de um dado perfil.
+         */
+        function getRecursos(idPerfil) {
+            $('#LoginPortalInt #container-profiles').on('click', 'a.list-group-item', function (e) {
+                e.preventDefault();
+                var idPerfil = $(e.target).data('idperfil');
+                $('#LoginPortalInt .loading').removeClass('closed').addClass('opened');
+                $.ajax({
+                    url: URL_GERENCIADOR + '/Seguranca/MontarRecursos',
+                    data: { id: idPerfil },
+                    type: 'POST',
+                    crossDomain: true,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    success: function (resp) {
+                        if (resp.url) {
+                            window.location.href = URL_GERENCIADOR + '' + resp.url;
+                        }
+                    }
+                });
+            });
+        }
+        /*
+         * @name: showAlerts
+         * @param msg, type
+         * @msg: 'Alert is check is content !!!'
+         * @type: success || danger || warning || info
+         * @container: container show messages
+         */
+
+        function showAlerts(_msg, _type, _container) {
+            var type = _type != '' ? _type : 'info';
+            var msg = _msg != '' ? _msg : 'info';
+            var container = _container != '' && _container != undefined ? _container : '.container-alerts';
+            var template = '';
+            template += '<div class="alert alert-' + type + ' alert-dismissible mb10 mt10" style="display:none;" role="alert">';
+            template += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            template += '' + msg + '';
+            template += '</div>';
+            $(container).children().remove();
+            $(container).append(template)
+            $(container).children().slideDown('fast', function () {
+                setTimeout(function () { $(container).children().slideUp('fast') }, 5000);
+            });
+        }
+
+        /*
+       * Função para criar e retornar o HTML do form
+       */
+        function createHTMLform() {
+            var html = '<div class="overlay-login" style="display:none;"></div>';
+            html += '<div id="" class="js-container-login-portal container-login-portal" style="display:none;">';
+            html += '<form id="LoginPortal" name="LoginPortal" class="form-login" validate>';
+            html += '<h2 class="title">Portal do Aluno<span class="js-btn-close-form-portal"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span></h2>';
+            html += '<div class="col-sm-12 mt10 mb10"> <div class="form-group">';
+            html += '<label class="sr-only" for="Login">Login</label>';
+            html += '<div class="input-group"> <div class="input-group-addon">';
+            html += '<span class="glyphicon glyphicon-user" aria-hidden="true"></span>';
+            html += '</div>';
+            html += '<input type="text" class="form-control txtLogin" id="Login" name="Login" placeholder="Digite seu Login" required oninvalid="this.setCustomValidity("O campo login é obrigatório.")" >';
+            html += '</div>';
+            html += '</div>';
+            html += '<div class="form-group">';
+            html += '<label class="sr-only" for="Senha">Senha</label>';
+            html += '<div class="input-group"><div class="input-group-addon">';
+            html += '<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>';
+            html += '</div>';
+            html += '<input type="password" class="form-control txtSenha" id="Senha" name="Senha" placeholder="Digite sua Senha" required>';
+            html += '</div>';
+            html += '</div>';
+            html += '<div class="form-group"><div class="pull-right">';
+            html += '<button type="submit" class="btn btn-default js-btn-acesar">Acessar Portal</button>';
+            html += '</div></div>';
+            html += '</div>';
+            html += '<div class="col-sm-12"><div class="container-alerts"></div></div>';
+            html += '<div class="loading closed"></div>';
+            html += '</form>';
+            html += '</div>';
+
+
+            return html;
+        }
+
+        function createHTMLformInstituicao() {
+            var html = '<div id="" class="container-login-portal container-login-portal-inst js-container-login-portal js-container-login-portal-inst">';
+            html += '<form id="LoginPortalInt" name="LoginPortalInst" target="_blank" class="form-login form-login-inst" action="http://localhost:2178/Seguranca/AutenticarExterno" method="POST" validate="" style="display:block;position:relative;left:0;top:0;">';
+            html += '<h2 class="title">Portal da Instituição<span class="js-btn-close-form-portal"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span></h2>';
+            html += '<div class="col-sm-12"><div id="container-profiles" class="list-group" style="display:none;"><h3>Acessar como: </h3></div></div>';
+            html += '<div class="col-sm-12 mb10 mt10" id="container-form">';
+            html += '<div class="form-group">';
+            html += '<label class="sr-only" for="Login">Login</label>';
+            html += '<div class="input-group">';
+            html += '<div class="input-group-addon">';
+            html += '<span class="glyphicon glyphicon-user" aria-hidden="true"></span>';
+            html += '</div>';
+            html += '<input type="text" class="form-control" id="Login" name="Login" placeholder="Digite seu Login" required="required">';
+            html += '</div>';
+            html += '</div>';
+            html += '<div class="form-group">';
+            html += '<label class="sr-only" for="Senha">Senha</label>';
+            html += '<div class="input-group">';
+            html += '<div class="input-group-addon">';
+            html += '<span class="glyphicon glyphicon-lock" aria-hidden="true"></span>';
+            html += '</div>';
+            html += '<input type="password" class="form-control" id="Senha" name="Senha" placeholder="Digite sua senha" required="required">';
+            html += '</div>';
+            html += '</div>';
+            html += '<button type="submit" class="btn btn-default js-btn-acesar">Acessar Portal</button>';
+            html += '<div class="login-bottom-links"><a href="#" data-toggle="modal" data-target="#ModalRecuperarSenha">Recuperar Senha</a></div>';
+            html += '</div>';
+            html += '<div class="col-sm-12"><div class="container-alerts"></div></div>';
+            html += '<div class="loading closed"></div>';
+            html += '</form>';
+
+
+            html += '<div id="ModalRecuperarSenha" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">';
+            html += '<div class="modal-dialog modal-sm">';
+            html += '<!-- Modal content-->';
+            html += '<div class="modal-content">';
+            html += '<div class="modal-header">';
+            html += '<button type="button" class="close" data-dismiss="modal">×</button>';
+            html += '<h4 class="modal-title">Recuperar Senha</h4>';
+            html += '</div>';
+            html += '<form method="post" action="#" id="FormRecuperarSenha">'
+            html += '<div class="modal-body">'
+            html += '<input type="email" name="email" class="form-control" data-val-required="O campo é obrigatório" placeholder="Digite seu e-mail">';
+            html += '</div>';
+            html += '<div id="alertaTrocarSenha" class="alert alert-warning" style="display:none;"><button type="button" class="close" onclick="$(this).parent().slideUp();"><span>&times;</span></button><span class="msg" id="spnMsg"></span></div>';
+            html += '<div class="modal-footer">';
+            html += '<input type="button" value="Recuperar Senha" onclick="trocarSenha()" class="btn btn-success">';
+            html += '<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>';
+            html += '</div></form></div></div></div>';
+            html += '</div>';
+
+            return html;
+        }
+
+
+
+    })();
+
+    // executando o plugin
+    portalAluno.init();
+
+
+
+})();
+

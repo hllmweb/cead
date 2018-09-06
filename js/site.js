@@ -3,13 +3,16 @@ $('a[href="#"]').click(function(e) {
 });
 
 $("#banner ul").bxSlider({
-	auto: false,
+	auto: true,
 	pager: false,
     slideMargin: 0,
 	nextText: '<i class="fa fa-chevron-right"></i>',
 	prevText: '<i class="fa fa-chevron-left"></i>'
 
 });
+
+
+
 
 
 //barra de menu fixa
@@ -37,6 +40,46 @@ $(".navegacao li").mouseover(function(){
     $(this).find(".menu-seta i").addClass("fa-flip-vertical");
 }).mouseout(function() {
     $(this).find(".menu-seta i").removeClass("fa-flip-vertical");
+});
+
+
+function abrirModal(id){
+    $(id).show();
+}
+
+$(".modal_sair").click(function(){
+	$(".modal").hide();
+	$(".modal_captura").hide();
+});
+
+$(document).keyup(function(e) {
+     if (e.keyCode == 27){
+        $(".modal").hide();
+        $(".modal_captura").hide();
+    }
+});
+$(".modal_corpo_captura").click(function(e) {
+	e.stopPropagation();
+});
+$(".modal_captura").click(function() {
+	$(".modal_captura").hide();
+});
+
+
+
+//form contato
+$("#form-contato").submit(function(e){
+  dados = $(this).serializeArray();
+  $.ajax({
+      type: "POST",
+      url: "email-contato.php",
+      data: dados,
+      success: function(dados){
+        $("#sucesso-contato").html(dados);
+      }
+  });
+
+ e.preventDefault();
 });
 
 
